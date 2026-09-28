@@ -4,3 +4,6 @@ __pycache__/
 .ruff_cache/
 .venv/
 again-check.json
+*.egg-info/
+build/
+dist/
