@@ -145,10 +145,11 @@ def _demo(args) -> str:
                      f"  over {_pct(s['cite_overclaim'])}"
                      f"  tok {_num(s['reporter_tokens'])}")
     for arm in FRONTIER:
-        curve = "  ".join(
-            f"B={b}:{_pct(score(list(zip(eval_exs, run_many(model, eval_exs, arm, b),
-                                        strict=True)))['answer_acc'])}"
-            for b in BUDGETS[arm])
+        points = []
+        for b in BUDGETS[arm]:
+            pairs = list(zip(eval_exs, run_many(model, eval_exs, arm, b), strict=True))
+            points.append(f"B={b}:{_pct(score(pairs)['answer_acc'])}")
+        curve = "  ".join(points)
         lines.append(f"{arm + ' frontier':22s}       {curve}")
     return "\n".join(lines)
 
