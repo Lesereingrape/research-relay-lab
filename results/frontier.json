@@ -1,0 +1,2011 @@
+{
+  "config": {
+    "arms": [
+      "typed_relay",
+      "cited_relay",
+      "full_context",
+      "plan_first",
+      "single_shot",
+      "oracle_relay"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "n_train": 4000,
+    "n_eval": 1200,
+    "eval_depths": [
+      2,
+      3
+    ],
+    "min_depth": 2,
+    "max_depth": 3,
+    "steps": 2500,
+    "batch": 128,
+    "lr": 0.005,
+    "params": 141990,
+    "cost": {
+      "typed_relay": 1,
+      "cited_relay": 2,
+      "full_context": 4,
+      "plan_first": 1,
+      "single_shot": 0,
+      "oracle_relay": 1
+    },
+    "default_budget": {
+      "typed_relay": 3,
+      "cited_relay": 6,
+      "full_context": 36,
+      "plan_first": 3,
+      "single_shot": 0,
+      "oracle_relay": 3
+    },
+    "budgets": {
+      "typed_relay": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "cited_relay": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "full_context": [
+        4,
+        12,
+        24,
+        36
+      ],
+      "plan_first": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "single_shot": [
+        0
+      ],
+      "oracle_relay": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "distractors": 2,
+    "n_tokens": 82,
+    "n_records": 64,
+    "n_values": 5,
+    "versions": [
+      1,
+      2,
+      3
+    ],
+    "max_payload": 44,
+    "chance": 0.2
+  },
+  "arms": {
+    "typed_relay": {
+      "answer_acc": {
+        "mean": 0.9547,
+        "std": 0.0152
+      },
+      "walked_ok": {
+        "mean": 0.9797,
+        "std": 0.0063
+      },
+      "wrong_value_rate": {
+        "mean": 0.0097,
+        "std": 0.0029
+      },
+      "lost_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "carried_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "cite_overclaim": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partial_sum_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "acc_full_notebook": {
+        "mean": 0.9547,
+        "std": 0.0152
+      },
+      "acc_when_walked": {
+        "mean": 0.9693,
+        "std": 0.0107
+      },
+      "reporter_tokens": {
+        "mean": 7.0,
+        "std": 0.0
+      },
+      "per_depth": {
+        "2": {
+          "answer_acc": {
+            "mean": 0.9817,
+            "std": 0.0041
+          },
+          "walked_ok": {
+            "mean": 0.9895,
+            "std": 0.0032
+          },
+          "wrong_value_rate": {
+            "mean": 0.0056,
+            "std": 0.0028
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 0.9817,
+            "std": 0.0041
+          },
+          "acc_when_walked": {
+            "mean": 0.9899,
+            "std": 0.006
+          },
+          "reporter_tokens": {
+            "mean": 7.0,
+            "std": 0.0
+          }
+        },
+        "3": {
+          "answer_acc": {
+            "mean": 0.9278,
+            "std": 0.0302
+          },
+          "walked_ok": {
+            "mean": 0.97,
+            "std": 0.0095
+          },
+          "wrong_value_rate": {
+            "mean": 0.0139,
+            "std": 0.0055
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 0.9278,
+            "std": 0.0302
+          },
+          "acc_when_walked": {
+            "mean": 0.9482,
+            "std": 0.0238
+          },
+          "reporter_tokens": {
+            "mean": 7.0,
+            "std": 0.0
+          }
+        }
+      },
+      "budget": {
+        "1": {
+          "answer_acc": {
+            "mean": 0.1978,
+            "std": 0.0141
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.5833,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.4167,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.3247,
+            "std": 0.099
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.1951,
+            "std": 0.0135
+          },
+          "reporter_tokens": {
+            "mean": 5.0,
+            "std": 0.0
+          }
+        },
+        "2": {
+          "answer_acc": {
+            "mean": 0.5928,
+            "std": 0.0063
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.1667,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.8333,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.5,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.1328,
+            "std": 0.0362
+          },
+          "acc_full_notebook": {
+            "mean": 0.9806,
+            "std": 0.0044
+          },
+          "acc_when_walked": {
+            "mean": 0.6008,
+            "std": 0.0056
+          },
+          "reporter_tokens": {
+            "mean": 6.0,
+            "std": 0.0
+          }
+        },
+        "3": {
+          "answer_acc": {
+            "mean": 0.9547,
+            "std": 0.0152
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 0.9547,
+            "std": 0.0152
+          },
+          "acc_when_walked": {
+            "mean": 0.9693,
+            "std": 0.0107
+          },
+          "reporter_tokens": {
+            "mean": 7.0,
+            "std": 0.0
+          }
+        },
+        "4": {
+          "answer_acc": {
+            "mean": 0.9564,
+            "std": 0.0122
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 0.9564,
+            "std": 0.0122
+          },
+          "acc_when_walked": {
+            "mean": 0.971,
+            "std": 0.0077
+          },
+          "reporter_tokens": {
+            "mean": 8.0,
+            "std": 0.0
+          }
+        }
+      },
+      "hops": [
+        0.0044,
+        0.01,
+        0.0239
+      ]
+    },
+    "cited_relay": {
+      "answer_acc": {
+        "mean": 0.945,
+        "std": 0.0132
+      },
+      "walked_ok": {
+        "mean": 0.9797,
+        "std": 0.0063
+      },
+      "wrong_value_rate": {
+        "mean": 0.0097,
+        "std": 0.0029
+      },
+      "lost_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "carried_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "cite_overclaim": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partial_sum_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "acc_full_notebook": {
+        "mean": 0.945,
+        "std": 0.0132
+      },
+      "acc_when_walked": {
+        "mean": 0.9591,
+        "std": 0.009
+      },
+      "reporter_tokens": {
+        "mean": 10.0,
+        "std": 0.0
+      },
+      "per_depth": {
+        "2": {
+          "answer_acc": {
+            "mean": 0.9817,
+            "std": 0.0041
+          },
+          "walked_ok": {
+            "mean": 0.9895,
+            "std": 0.0032
+          },
+          "wrong_value_rate": {
+            "mean": 0.0056,
+            "std": 0.0028
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 0.9817,
+            "std": 0.0041
+          },
+          "acc_when_walked": {
+            "mean": 0.9899,
+            "std": 0.006
+          },
+          "reporter_tokens": {
+            "mean": 10.0,
+            "std": 0.0
+          }
+        },
+        "3": {
+          "answer_acc": {
+            "mean": 0.9083,
+            "std": 0.0259
+          },
+          "walked_ok": {
+            "mean": 0.97,
+            "std": 0.0095
+          },
+          "wrong_value_rate": {
+            "mean": 0.0139,
+            "std": 0.0055
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 0.9083,
+            "std": 0.0259
+          },
+          "acc_when_walked": {
+            "mean": 0.9277,
+            "std": 0.0192
+          },
+          "reporter_tokens": {
+            "mean": 10.0,
+            "std": 0.0
+          }
+        }
+      },
+      "budget": {
+        "2": {
+          "answer_acc": {
+            "mean": 0.198,
+            "std": 0.0111
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.5833,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.4167,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.3286,
+            "std": 0.0969
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.1959,
+            "std": 0.0101
+          },
+          "reporter_tokens": {
+            "mean": 6.0,
+            "std": 0.0
+          }
+        },
+        "4": {
+          "answer_acc": {
+            "mean": 0.5964,
+            "std": 0.0008
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.1667,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.8333,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.4992,
+            "std": 0.0012
+          },
+          "partial_sum_rate": {
+            "mean": 0.1261,
+            "std": 0.013
+          },
+          "acc_full_notebook": {
+            "mean": 0.9789,
+            "std": 0.0078
+          },
+          "acc_when_walked": {
+            "mean": 0.6054,
+            "std": 0.0035
+          },
+          "reporter_tokens": {
+            "mean": 8.0,
+            "std": 0.0
+          }
+        },
+        "6": {
+          "answer_acc": {
+            "mean": 0.945,
+            "std": 0.0132
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 0.945,
+            "std": 0.0132
+          },
+          "acc_when_walked": {
+            "mean": 0.9591,
+            "std": 0.009
+          },
+          "reporter_tokens": {
+            "mean": 10.0,
+            "std": 0.0
+          }
+        },
+        "8": {
+          "answer_acc": {
+            "mean": 0.9503,
+            "std": 0.0169
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 0.9503,
+            "std": 0.0169
+          },
+          "acc_when_walked": {
+            "mean": 0.9645,
+            "std": 0.0126
+          },
+          "reporter_tokens": {
+            "mean": 12.0,
+            "std": 0.0
+          }
+        }
+      },
+      "hops": [
+        0.0044,
+        0.01,
+        0.0239
+      ]
+    },
+    "full_context": {
+      "answer_acc": {
+        "mean": 0.2908,
+        "std": 0.026
+      },
+      "walked_ok": {
+        "mean": 0.9797,
+        "std": 0.0063
+      },
+      "wrong_value_rate": {
+        "mean": null,
+        "std": null
+      },
+      "lost_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "carried_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "cite_overclaim": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partial_sum_rate": {
+        "mean": null,
+        "std": null
+      },
+      "acc_full_notebook": {
+        "mean": null,
+        "std": null
+      },
+      "acc_when_walked": {
+        "mean": 0.2928,
+        "std": 0.0274
+      },
+      "reporter_tokens": {
+        "mean": 34.0,
+        "std": 0.0
+      },
+      "per_depth": {
+        "2": {
+          "answer_acc": {
+            "mean": 0.3794,
+            "std": 0.0501
+          },
+          "walked_ok": {
+            "mean": 0.9895,
+            "std": 0.0032
+          },
+          "wrong_value_rate": {
+            "mean": null,
+            "std": null
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": null,
+            "std": null
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.3812,
+            "std": 0.0504
+          },
+          "reporter_tokens": {
+            "mean": 28.0,
+            "std": 0.0
+          }
+        },
+        "3": {
+          "answer_acc": {
+            "mean": 0.2022,
+            "std": 0.0021
+          },
+          "walked_ok": {
+            "mean": 0.97,
+            "std": 0.0095
+          },
+          "wrong_value_rate": {
+            "mean": null,
+            "std": null
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": null,
+            "std": null
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.2027,
+            "std": 0.0041
+          },
+          "reporter_tokens": {
+            "mean": 40.0,
+            "std": 0.0
+          }
+        }
+      },
+      "budget": {
+        "4": {
+          "answer_acc": {
+            "mean": 0.1942,
+            "std": 0.0087
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": null,
+            "std": null
+          },
+          "lost_rate": {
+            "mean": 0.8643,
+            "std": 0.0037
+          },
+          "carried_rate": {
+            "mean": 0.1357,
+            "std": 0.0037
+          },
+          "cite_overclaim": {
+            "mean": 0.9986,
+            "std": 0.002
+          },
+          "partial_sum_rate": {
+            "mean": null,
+            "std": null
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.1954,
+            "std": 0.0078
+          },
+          "reporter_tokens": {
+            "mean": 8.0,
+            "std": 0.0
+          }
+        },
+        "12": {
+          "answer_acc": {
+            "mean": 0.1956,
+            "std": 0.0068
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": null,
+            "std": null
+          },
+          "lost_rate": {
+            "mean": 0.5587,
+            "std": 0.0008
+          },
+          "carried_rate": {
+            "mean": 0.4413,
+            "std": 0.0008
+          },
+          "cite_overclaim": {
+            "mean": 0.955,
+            "std": 0.006
+          },
+          "partial_sum_rate": {
+            "mean": null,
+            "std": null
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.1959,
+            "std": 0.0061
+          },
+          "reporter_tokens": {
+            "mean": 16.0,
+            "std": 0.0
+          }
+        },
+        "24": {
+          "answer_acc": {
+            "mean": 0.2875,
+            "std": 0.0239
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": null,
+            "std": null
+          },
+          "lost_rate": {
+            "mean": 0.1529,
+            "std": 0.001
+          },
+          "carried_rate": {
+            "mean": 0.8471,
+            "std": 0.001
+          },
+          "cite_overclaim": {
+            "mean": 0.2381,
+            "std": 0.1077
+          },
+          "partial_sum_rate": {
+            "mean": null,
+            "std": null
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.2883,
+            "std": 0.0236
+          },
+          "reporter_tokens": {
+            "mean": 28.0,
+            "std": 0.0
+          }
+        },
+        "36": {
+          "answer_acc": {
+            "mean": 0.2908,
+            "std": 0.026
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": null,
+            "std": null
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": null,
+            "std": null
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.2928,
+            "std": 0.0274
+          },
+          "reporter_tokens": {
+            "mean": 34.0,
+            "std": 0.0
+          }
+        }
+      },
+      "hops": [
+        0.0044,
+        0.01,
+        0.0239
+      ]
+    },
+    "plan_first": {
+      "answer_acc": {
+        "mean": 0.2031,
+        "std": 0.0133
+      },
+      "walked_ok": {
+        "mean": 0.4947,
+        "std": 0.0016
+      },
+      "wrong_value_rate": {
+        "mean": 0.0018,
+        "std": 0.0018
+      },
+      "lost_rate": {
+        "mean": 0.5833,
+        "std": 0.0
+      },
+      "carried_rate": {
+        "mean": 0.4167,
+        "std": 0.0
+      },
+      "cite_overclaim": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "partial_sum_rate": {
+        "mean": 0.2784,
+        "std": 0.0695
+      },
+      "acc_full_notebook": {
+        "mean": null,
+        "std": null
+      },
+      "acc_when_walked": {
+        "mean": 0.201,
+        "std": 0.0191
+      },
+      "reporter_tokens": {
+        "mean": 7.0,
+        "std": 0.0
+      },
+      "per_depth": {
+        "2": {
+          "answer_acc": {
+            "mean": 0.2011,
+            "std": 0.0195
+          },
+          "walked_ok": {
+            "mean": 0.9895,
+            "std": 0.0032
+          },
+          "wrong_value_rate": {
+            "mean": 0.0017,
+            "std": 0.0018
+          },
+          "lost_rate": {
+            "mean": 0.5,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.5,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.2211,
+            "std": 0.0405
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.201,
+            "std": 0.0191
+          },
+          "reporter_tokens": {
+            "mean": 7.0,
+            "std": 0.0
+          }
+        },
+        "3": {
+          "answer_acc": {
+            "mean": 0.205,
+            "std": 0.0094
+          },
+          "walked_ok": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "wrong_value_rate": {
+            "mean": 0.0018,
+            "std": 0.0019
+          },
+          "lost_rate": {
+            "mean": 0.6667,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.3333,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.3356,
+            "std": 0.1308
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": null,
+            "std": null
+          },
+          "reporter_tokens": {
+            "mean": 7.0,
+            "std": 0.0
+          }
+        }
+      },
+      "budget": {
+        "1": {
+          "answer_acc": {
+            "mean": 0.1978,
+            "std": 0.0141
+          },
+          "walked_ok": {
+            "mean": 0.4947,
+            "std": 0.0016
+          },
+          "wrong_value_rate": {
+            "mean": 0.0018,
+            "std": 0.0018
+          },
+          "lost_rate": {
+            "mean": 0.5833,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.4167,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.3247,
+            "std": 0.099
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.1954,
+            "std": 0.0208
+          },
+          "reporter_tokens": {
+            "mean": 5.0,
+            "std": 0.0
+          }
+        },
+        "2": {
+          "answer_acc": {
+            "mean": 0.1964,
+            "std": 0.0159
+          },
+          "walked_ok": {
+            "mean": 0.4947,
+            "std": 0.0016
+          },
+          "wrong_value_rate": {
+            "mean": 0.0018,
+            "std": 0.0018
+          },
+          "lost_rate": {
+            "mean": 0.5833,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.4167,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.2981,
+            "std": 0.093
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.1976,
+            "std": 0.0214
+          },
+          "reporter_tokens": {
+            "mean": 6.0,
+            "std": 0.0
+          }
+        },
+        "3": {
+          "answer_acc": {
+            "mean": 0.2031,
+            "std": 0.0133
+          },
+          "walked_ok": {
+            "mean": 0.4947,
+            "std": 0.0016
+          },
+          "wrong_value_rate": {
+            "mean": 0.0018,
+            "std": 0.0018
+          },
+          "lost_rate": {
+            "mean": 0.5833,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.4167,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.2784,
+            "std": 0.0695
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.201,
+            "std": 0.0191
+          },
+          "reporter_tokens": {
+            "mean": 7.0,
+            "std": 0.0
+          }
+        },
+        "4": {
+          "answer_acc": {
+            "mean": 0.2011,
+            "std": 0.0119
+          },
+          "walked_ok": {
+            "mean": 0.4947,
+            "std": 0.0016
+          },
+          "wrong_value_rate": {
+            "mean": 0.0018,
+            "std": 0.0018
+          },
+          "lost_rate": {
+            "mean": 0.5833,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.4167,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.2722,
+            "std": 0.0655
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.1999,
+            "std": 0.0198
+          },
+          "reporter_tokens": {
+            "mean": 8.0,
+            "std": 0.0
+          }
+        }
+      },
+      "hops": null
+    },
+    "single_shot": {
+      "answer_acc": {
+        "mean": 0.2033,
+        "std": 0.0007
+      },
+      "walked_ok": {
+        "mean": null,
+        "std": null
+      },
+      "wrong_value_rate": {
+        "mean": null,
+        "std": null
+      },
+      "lost_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "carried_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "cite_overclaim": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "partial_sum_rate": {
+        "mean": null,
+        "std": null
+      },
+      "acc_full_notebook": {
+        "mean": null,
+        "std": null
+      },
+      "acc_when_walked": {
+        "mean": null,
+        "std": null
+      },
+      "reporter_tokens": {
+        "mean": 4.0,
+        "std": 0.0
+      },
+      "per_depth": {
+        "2": {
+          "answer_acc": {
+            "mean": 0.2028,
+            "std": 0.0102
+          },
+          "walked_ok": {
+            "mean": null,
+            "std": null
+          },
+          "wrong_value_rate": {
+            "mean": null,
+            "std": null
+          },
+          "lost_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": null,
+            "std": null
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": null,
+            "std": null
+          },
+          "reporter_tokens": {
+            "mean": 4.0,
+            "std": 0.0
+          }
+        },
+        "3": {
+          "answer_acc": {
+            "mean": 0.2039,
+            "std": 0.0116
+          },
+          "walked_ok": {
+            "mean": null,
+            "std": null
+          },
+          "wrong_value_rate": {
+            "mean": null,
+            "std": null
+          },
+          "lost_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": null,
+            "std": null
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": null,
+            "std": null
+          },
+          "reporter_tokens": {
+            "mean": 4.0,
+            "std": 0.0
+          }
+        }
+      },
+      "budget": {
+        "0": {
+          "answer_acc": {
+            "mean": 0.2033,
+            "std": 0.0007
+          },
+          "walked_ok": {
+            "mean": null,
+            "std": null
+          },
+          "wrong_value_rate": {
+            "mean": null,
+            "std": null
+          },
+          "lost_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": null,
+            "std": null
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": null,
+            "std": null
+          },
+          "reporter_tokens": {
+            "mean": 4.0,
+            "std": 0.0
+          }
+        }
+      },
+      "hops": null
+    },
+    "oracle_relay": {
+      "answer_acc": {
+        "mean": 0.9928,
+        "std": 0.0032
+      },
+      "walked_ok": {
+        "mean": 0.9797,
+        "std": 0.0063
+      },
+      "wrong_value_rate": {
+        "mean": 0.0097,
+        "std": 0.0029
+      },
+      "lost_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "carried_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "cite_overclaim": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partial_sum_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "acc_full_notebook": {
+        "mean": 0.9928,
+        "std": 0.0032
+      },
+      "acc_when_walked": {
+        "mean": 0.9929,
+        "std": 0.0029
+      },
+      "reporter_tokens": {
+        "mean": 7.0,
+        "std": 0.0
+      },
+      "per_depth": {
+        "2": {
+          "answer_acc": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "walked_ok": {
+            "mean": 0.9895,
+            "std": 0.0032
+          },
+          "wrong_value_rate": {
+            "mean": 0.0056,
+            "std": 0.0028
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "acc_when_walked": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "reporter_tokens": {
+            "mean": 7.0,
+            "std": 0.0
+          }
+        },
+        "3": {
+          "answer_acc": {
+            "mean": 0.9856,
+            "std": 0.0063
+          },
+          "walked_ok": {
+            "mean": 0.97,
+            "std": 0.0095
+          },
+          "wrong_value_rate": {
+            "mean": 0.0139,
+            "std": 0.0055
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 0.9856,
+            "std": 0.0063
+          },
+          "acc_when_walked": {
+            "mean": 0.9856,
+            "std": 0.0058
+          },
+          "reporter_tokens": {
+            "mean": 7.0,
+            "std": 0.0
+          }
+        }
+      },
+      "budget": {
+        "1": {
+          "answer_acc": {
+            "mean": 0.1983,
+            "std": 0.0138
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.5833,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.4167,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.3253,
+            "std": 0.0978
+          },
+          "acc_full_notebook": {
+            "mean": null,
+            "std": null
+          },
+          "acc_when_walked": {
+            "mean": 0.1948,
+            "std": 0.013
+          },
+          "reporter_tokens": {
+            "mean": 5.0,
+            "std": 0.0
+          }
+        },
+        "2": {
+          "answer_acc": {
+            "mean": 0.6033,
+            "std": 0.0083
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.1667,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 0.8333,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.5,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.1334,
+            "std": 0.0366
+          },
+          "acc_full_notebook": {
+            "mean": 0.9989,
+            "std": 0.0016
+          },
+          "acc_when_walked": {
+            "mean": 0.6065,
+            "std": 0.0095
+          },
+          "reporter_tokens": {
+            "mean": 6.0,
+            "std": 0.0
+          }
+        },
+        "3": {
+          "answer_acc": {
+            "mean": 0.9928,
+            "std": 0.0032
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 0.9928,
+            "std": 0.0032
+          },
+          "acc_when_walked": {
+            "mean": 0.9929,
+            "std": 0.0029
+          },
+          "reporter_tokens": {
+            "mean": 7.0,
+            "std": 0.0
+          }
+        },
+        "4": {
+          "answer_acc": {
+            "mean": 0.9945,
+            "std": 0.0004
+          },
+          "walked_ok": {
+            "mean": 0.9797,
+            "std": 0.0063
+          },
+          "wrong_value_rate": {
+            "mean": 0.0097,
+            "std": 0.0029
+          },
+          "lost_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "carried_rate": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "cite_overclaim": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "partial_sum_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "acc_full_notebook": {
+            "mean": 0.9945,
+            "std": 0.0004
+          },
+          "acc_when_walked": {
+            "mean": 0.9946,
+            "std": 0.0004
+          },
+          "reporter_tokens": {
+            "mean": 8.0,
+            "std": 0.0
+          }
+        }
+      },
+      "hops": null
+    },
+    "_policy": {
+      "note_acc": {
+        "mean": 0.9891,
+        "std": 0.0038
+      },
+      "next_acc": {
+        "mean": 0.9807,
+        "std": 0.0087
+      }
+    }
+  },
+  "per_seed": {
+    "0": {
+      "typed_relay": {
+        "answer_acc": 0.9333,
+        "walked_ok": 0.9708,
+        "wrong_value_rate": 0.0133,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": 0.0,
+        "acc_full_notebook": 0.9333,
+        "reporter_tokens": 7.0
+      },
+      "cited_relay": {
+        "answer_acc": 0.9267,
+        "walked_ok": 0.9708,
+        "wrong_value_rate": 0.0133,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": 0.0,
+        "acc_full_notebook": 0.9267,
+        "reporter_tokens": 10.0
+      },
+      "full_context": {
+        "answer_acc": 0.27,
+        "walked_ok": 0.9708,
+        "wrong_value_rate": null,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": null,
+        "acc_full_notebook": null,
+        "reporter_tokens": 34.0
+      },
+      "plan_first": {
+        "answer_acc": 0.2017,
+        "walked_ok": 0.4925,
+        "wrong_value_rate": 0.0043,
+        "lost_rate": 0.5833,
+        "carried_rate": 0.4167,
+        "cite_overclaim": 1.0,
+        "partial_sum_rate": 0.2117,
+        "acc_full_notebook": null,
+        "reporter_tokens": 7.0
+      },
+      "single_shot": {
+        "answer_acc": 0.2033,
+        "walked_ok": null,
+        "wrong_value_rate": null,
+        "lost_rate": 1.0,
+        "carried_rate": 0.0,
+        "cite_overclaim": 1.0,
+        "partial_sum_rate": null,
+        "acc_full_notebook": null,
+        "reporter_tokens": 4.0
+      },
+      "oracle_relay": {
+        "answer_acc": 0.9883,
+        "walked_ok": 0.9708,
+        "wrong_value_rate": 0.0133,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": 0.0,
+        "acc_full_notebook": 0.9883,
+        "reporter_tokens": 7.0
+      }
+    },
+    "1": {
+      "typed_relay": {
+        "answer_acc": 0.9633,
+        "walked_ok": 0.9833,
+        "wrong_value_rate": 0.0096,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": 0.0,
+        "acc_full_notebook": 0.9633,
+        "reporter_tokens": 7.0
+      },
+      "cited_relay": {
+        "answer_acc": 0.9508,
+        "walked_ok": 0.9833,
+        "wrong_value_rate": 0.0096,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": 0.0,
+        "acc_full_notebook": 0.9508,
+        "reporter_tokens": 10.0
+      },
+      "full_context": {
+        "answer_acc": 0.3275,
+        "walked_ok": 0.9833,
+        "wrong_value_rate": null,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": null,
+        "acc_full_notebook": null,
+        "reporter_tokens": 34.0
+      },
+      "plan_first": {
+        "answer_acc": 0.1875,
+        "walked_ok": 0.4958,
+        "wrong_value_rate": 0.0006,
+        "lost_rate": 0.5833,
+        "carried_rate": 0.4167,
+        "cite_overclaim": 1.0,
+        "partial_sum_rate": 0.2492,
+        "acc_full_notebook": null,
+        "reporter_tokens": 7.0
+      },
+      "single_shot": {
+        "answer_acc": 0.2025,
+        "walked_ok": null,
+        "wrong_value_rate": null,
+        "lost_rate": 1.0,
+        "carried_rate": 0.0,
+        "cite_overclaim": 1.0,
+        "partial_sum_rate": null,
+        "acc_full_notebook": null,
+        "reporter_tokens": 4.0
+      },
+      "oracle_relay": {
+        "answer_acc": 0.995,
+        "walked_ok": 0.9833,
+        "wrong_value_rate": 0.0096,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": 0.0,
+        "acc_full_notebook": 0.995,
+        "reporter_tokens": 7.0
+      }
+    },
+    "2": {
+      "typed_relay": {
+        "answer_acc": 0.9675,
+        "walked_ok": 0.985,
+        "wrong_value_rate": 0.0063,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": 0.0,
+        "acc_full_notebook": 0.9675,
+        "reporter_tokens": 7.0
+      },
+      "cited_relay": {
+        "answer_acc": 0.9575,
+        "walked_ok": 0.985,
+        "wrong_value_rate": 0.0063,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": 0.0,
+        "acc_full_notebook": 0.9575,
+        "reporter_tokens": 10.0
+      },
+      "full_context": {
+        "answer_acc": 0.275,
+        "walked_ok": 0.985,
+        "wrong_value_rate": null,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": null,
+        "acc_full_notebook": null,
+        "reporter_tokens": 34.0
+      },
+      "plan_first": {
+        "answer_acc": 0.22,
+        "walked_ok": 0.4958,
+        "wrong_value_rate": 0.0004,
+        "lost_rate": 0.5833,
+        "carried_rate": 0.4167,
+        "cite_overclaim": 1.0,
+        "partial_sum_rate": 0.3742,
+        "acc_full_notebook": null,
+        "reporter_tokens": 7.0
+      },
+      "single_shot": {
+        "answer_acc": 0.2042,
+        "walked_ok": null,
+        "wrong_value_rate": null,
+        "lost_rate": 1.0,
+        "carried_rate": 0.0,
+        "cite_overclaim": 1.0,
+        "partial_sum_rate": null,
+        "acc_full_notebook": null,
+        "reporter_tokens": 4.0
+      },
+      "oracle_relay": {
+        "answer_acc": 0.995,
+        "walked_ok": 0.985,
+        "wrong_value_rate": 0.0063,
+        "lost_rate": 0.0,
+        "carried_rate": 1.0,
+        "cite_overclaim": 0.0,
+        "partial_sum_rate": 0.0,
+        "acc_full_notebook": 0.995,
+        "reporter_tokens": 7.0
+      }
+    }
+  },
+  "per_seed_policy": {
+    "0": {
+      "note_acc": 0.984,
+      "next_acc": 0.9683
+    },
+    "1": {
+      "note_acc": 0.9903,
+      "next_acc": 0.9867
+    },
+    "2": {
+      "note_acc": 0.993,
+      "next_acc": 0.987
+    }
+  },
+  "environment": {
+    "python": "3.13.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.14.0+cpu",
+    "threads": 8,
+    "device": "cpu"
+  },
+  "runtime_sec": 1301.6
+}
