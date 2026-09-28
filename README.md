@@ -114,6 +114,13 @@ policy can memorise "record 7 is worth 4" and answer without reading the evidenc
 was handed, and the study would then measure memorisation instead of the relay. The
 rule repeats; the facts never do.
 
+You can watch that failure mode from the other side: `relay demo --train 800` clones
+from few enough ledgers that the policy never learns the rule. Its teacher-forced
+readout falls, `typed_relay` and `cited_relay` fall with it to roughly chance, and only
+`oracle_relay` -- whose notebook the verifier writes instead of the researcher -- stays
+comfortably above it. `--train` is there so a reader can price that choice rather than
+take it on trust.
+
 A search for a record returns its freshest line plus two lines from unrelated records,
 in a shuffled order (`relay.harness.look`). So "was the evidence available" and "was
 the evidence used" are different questions, and the harnesses differ on both.

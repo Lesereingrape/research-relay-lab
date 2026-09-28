@@ -43,8 +43,10 @@ from .study import EVAL_DEPTHS, teacher_forced
 from .train import build_traces, train
 
 # Small enough to run while reading the README, large enough that the policy has to
-# learn the rule rather than the ledgers: at 800 training ledgers it memorises the
-# values and the held-out split (a different ledger per query) collapses to a guess.
+# learn the rule rather than the ledgers. At `--train 800` on these same steps the
+# policy scores 0.842 on the ledgers it cloned from and 0.250 on the held-out split,
+# where chance is 0.200: it memorised the values, not the rule. At 2500 the same pair
+# is 0.917 / 0.858.
 DEMO_TRAIN = 2500
 DEMO_EVAL = 120
 DEMO_STEPS = 1200
